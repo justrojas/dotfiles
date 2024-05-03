@@ -1,17 +1,12 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install -y git wget
+sudo dnf makecache
+sudo dnf install -y git wget
 
-sudo mkdir -p /etc/apt/keyrings
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
-echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
-sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-
-sudo apt update
-sudo apt install -y neofetch xclip vim tldr fuse python3 python3.11-venv npm zsh curl autojump fzf gpg p7zip-full nodejs eza
+sudo dnf makecache
+sudo dnf install -y neofetch xclip vim tldr fuse python3 python3.11-venv npm zsh curl autojump fzf gpg p7zip-full nodejs eza
 sudo npm install -g typescript
-sudo apt install libevent-dev libncurses5-dev libncursesw5-dev
+sudo dnf install libevent-dev libncurses5-dev libncursesw5-dev
 
 tldr -u
 

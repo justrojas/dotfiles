@@ -10,7 +10,6 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/.local/bin:$PATH
-export BDAI=$HOME/projects/bdai
 source ~/Documents/dotfiles/scripts/docker/_config/docker_functions.bash
 
 export ROS_DOMAIN_ID=30
